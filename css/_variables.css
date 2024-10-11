@@ -1,0 +1,17 @@
+:root {
+    --fontMain: ;
+    --fontHead: ;
+
+    --primaryColor: ;
+    --secondaryColor: ;
+    --tertiaryColor: ;
+    --quaternaryColor: ;
+
+    --paddingSmall: ;
+    --paddingMedium: ;
+    --paddingLarge: ;
+
+    --marginSmall: 0.5rem;
+    --marginMedium: 1rem;
+    --marginLarge: 1.5rem;
+}
