@@ -25,6 +25,7 @@ body {
         select {
             padding: var(--paddingSmall) var(--paddingMedium);
             border-radius: 0.5rem;
+            cursor: pointer;
         }
         img {
             display: none;
@@ -54,6 +55,7 @@ body {
         padding: var(--paddingMedium);
         background-color: transparent;
         border: none;
+        cursor: pointer;
     }
     #homeSection {
         .releaseSection {
@@ -69,7 +71,8 @@ body {
                 border-radius: 0.5rem;
                 background-color: var(--quaternaryColor);
                 color: var(--fontColorSecondary);
-                padding: var(--paddingSmall) var(--paddingMedium);
+                padding: var(--paddingMedium) var(--paddingMedium);
+                margin-bottom: var(--marginLarge);
             }
             h2 {
                 margin: var(--marginSmall);
@@ -105,6 +108,9 @@ body {
         }
     }
     #tourSection {
+        .largeImage {
+            display: none;
+        }
         article {
             margin: var(--marginMedium);
             border-bottom: 1px solid var(--secondaryColor);
@@ -202,6 +208,7 @@ body {
             input[type=text], input[type=email], textarea {
                 width: 100%;
                 margin-bottom: var(--marginMedium);
+                padding: var(--paddingSmall);
             }
             input[type=submit] {
                 padding: var(--paddingSmall) var(--paddingMedium);
@@ -209,7 +216,11 @@ body {
                 color: var(--fontColorSecondary);
                 border: 0rem;
                 border-radius: 0.5rem;
+                cursor: pointer;
             }
+        }
+        .conferenceImage {
+            display: none;
         }
     }
     footer {
@@ -236,6 +247,7 @@ body {
         .socialsLogos img{
             width: 20%;
             border-radius: 50%;
+            cursor: pointer;
         }
         .policies p{
             color: var(--fontColorSecondary);
@@ -279,13 +291,21 @@ body {
         #homeSection {
             .releaseSection {
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: center;
+                align-items: center; 
+                div {
+                    margin-left: auto;
+                }
+                img {
+                    margin-left: auto;
+                }
             }
         }
         #bookSection {
             article {
                 display: flex;
                 flex-direction: row;
+                gap: var(--marginLarge);
                 img {
                     order: 2;
                 }
@@ -306,23 +326,130 @@ body {
         footer {
             display: grid;
             grid-template-columns: auto 2fr auto;
+            align-items:start;
+            .keaLogo{
+                flex-direction: column;
+            }
+            .socialsLogos {
+                justify-content: start;
+            }
+            .credits {
+                text-align: end;
+            }
+            .copyright {
+                grid-column: 2;
+            }
         }
     }
     @media (min-width:768px) {
         #homeSection {
-            aside {
-                display: block;
-                width: 30%;
-                padding-left: 15px;
-                margin-left: 15px;
-                float: right;
+            .descriptionText {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                div {
+                    flex:1;
+                }
+                aside {
+                    display: block;
+                    width: 20%;
+                    padding-left: 15px;
+                    margin-left: 15px;
+                    header {
+                        background-color: var(--backgroundColor);
+                        color: var(--fontColorPrimary);
+                        padding: 0;
+                        text-align: center;
+                        font-size: var(--fontXsmallHeader);
+                        line-height: 1rem;
+                        p {
+                            margin-bottom: 0;
+                        }
+                        
+                        p:nth-of-type(2) {
+                            font-weight: 200;
+                        }
+                    }
+                    div:nth-of-type(2) {
+                        display: none;
+                    }
+                }
             }
         }
         #tourSection {
-            
+            .smallImage {
+                display: none;
+            }
+            .largeImage {
+                display: block;
+                max-height: 450px;
+                object-fit: cover;
+            }
+        }
+        #contactSection {
+            .contactInformation {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                .conferenceImage {
+                    padding: var(--paddingMedium);
+                    display: block;
+                    height: max-content;
+                }
+            }
         }
     }
     @media (min-width: 1024px){
-
+        margin: 0rem var(--marginXlarge);
+        #homeSection {
+            .descriptionText {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                aside {
+                    width: 30%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: var(--marginMedium);
+                    div:nth-of-type(2) {
+                        display: block;
+                    }
+                }
+            }
+        }
+        #tourSection {
+            .tours {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                article {
+                    border-radius: 0.5rem;
+                    padding: var(--paddingSmall);
+                    border: 1px solid var(--secondaryColor);
+                }
+            }
+        }
+        #bookSection {
+            .books {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                article {
+                    border-radius: 0.5rem;
+                    padding: var(--paddingSmall);
+                    border: 1px solid var(--secondaryColor);
+                    img {
+                        width: var(--imgXsmall);
+                        height: min-content;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+        #contactSection {
+            .contactInformation {
+                grid-template-columns: 2fr 1fr;
+                .conferenceImage {
+                    height: 100%;
+                }
+            }
+        }
     }
 }

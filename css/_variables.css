@@ -9,6 +9,7 @@
     --fontMain: "Montserrat", sans-serif;
 
     --fontBody: 0.875rem;
+    --fontXsmallHeader: 0.7rem;
     --fontSmallHeader: 1rem;
     --fontMediumHeader: 1.5rem;
     --fontLargeHeader: 2.5rem;
@@ -29,6 +30,7 @@
     --marginSmall: 0.5rem;
     --marginMedium: 1rem;
     --marginLarge: 1.5rem;
+    --marginXlarge: 7rem;
 
     --imgXsmall: 150px;
     --imgSmall: 250px;
