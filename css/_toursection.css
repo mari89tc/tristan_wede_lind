@@ -1,0 +1,53 @@
+#tourSection {
+    .largeImage {
+        display: none;
+    }
+    article {
+        margin: var(--marginMedium);
+        border-bottom: 1px solid var(--secondaryColor);
+        p:nth-of-type(1) {
+            font-weight: 600;
+            color: var(--primaryColor);
+        }
+        p:nth-of-type(2) {
+            font-weight: 600;
+            color: var(--quaternaryColor);
+        }
+        .tourDate {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            img {
+                width: 20px;
+            }
+            p {
+                font-weight: 200;
+            }
+        }
+    }
+}
+@media (min-width:768px) {
+    #tourSection {
+        .smallImage {
+            display: none;
+        }
+        .largeImage {
+            display: block;
+            max-height: 450px;
+            object-fit: cover;
+        }
+    }
+}
+@media (min-width: 1024px){
+    #tourSection {
+        .tours {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            article {
+                border-radius: 0.5rem;
+                padding: var(--paddingSmall);
+                border: 1px solid var(--secondaryColor);
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+#contactSection {
+    article {
+        margin: var(--marginMedium);
+        padding-bottom: var(--paddingMedium);
+        img {
+            display: grid;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            width: var(--imgXsmall);
+        }
+        header {
+            padding: 0;
+            color: var(--fontColorPrimary);
+            background-color: var(--backgroundColor);
+            h4 {
+                font-size: var(--fontSmallHeader);
+                margin-bottom: var(--marginMedium);
+            }
+        }
+        div {
+            p {
+                margin-bottom: var(--marginSmall);
+            }
+            a {
+                color: var(--tertiaryColor);
+                text-decoration: none;
+            }
+        }
+    }
+    article:nth-of-type(1) {
+        border-bottom: 1px solid var(--secondaryColor);
+    }
+    form {
+        margin: var(--marginMedium);
+        fieldset {
+            border-radius: 0.5rem;
+            padding: var(--paddingMedium);
+        }
+        label {
+            display: flow;
+        }
+        input[type=text], input[type=email], textarea {
+            width: 100%;
+            margin-bottom: var(--marginMedium);
+            padding: var(--paddingSmall);
+        }
+        input[type=submit] {
+            padding: var(--paddingSmall) var(--paddingMedium);
+            background-color: var(--tertiaryColor);
+            color: var(--fontColorSecondary);
+            border: 0;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+    }
+    .conferenceImage {
+        display: none;
+    }
+}
+@media (min-width:650px){
+    #contactSection {
+        article {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+                margin-right: var(--marginMedium);
+                margin-left: var(--marginSmall);
+            }
+        }
+    }
+}
+@media (min-width:768px) {
+    #contactSection {
+        .contactInformation {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            .conferenceImage {
+                padding: var(--paddingMedium);
+                display: block;
+                height: max-content;
+            }
+        }
+    }
+}
+@media (min-width: 1024px){
+    #contactSection {
+        .contactInformation {
+            grid-template-columns: 2fr 1fr;
+            .conferenceImage {
+                height: max-content;
+            }
+        }
+    }
+}

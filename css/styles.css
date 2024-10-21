@@ -1,4 +1,8 @@
 @import "_variables.css";
+@import "_homesection.css";
+@import "_toursection.css";
+@import "_booksection.css";
+@import "_contactsection.css";
 
 * {
     margin: 0;
@@ -20,7 +24,7 @@ body {
         padding: var(--paddingMedium);
         background-color: var(--primaryColor);
         p {
-            margin: var(--marginSmall) 0rem;
+            margin: var(--marginSmall) 0;
         }
         select {
             padding: var(--paddingSmall) var(--paddingMedium);
@@ -35,7 +39,7 @@ body {
         text-align: center;
         background-color: var(--tertiaryColor);
         li {
-            padding: var(--paddingSmall) 0rem;
+            padding: var(--paddingSmall) 0;
             border-bottom: 1px solid var(--secondaryColor);
             list-style: none;
             a {
@@ -49,179 +53,14 @@ body {
         color: var(--secondaryColor);
         padding: var(--paddingSmall);
     }
-    .upArrow{
+    #upArrow{
         display: grid;
         margin-left: auto;
         padding: var(--paddingMedium);
         background-color: transparent;
         border: none;
         cursor: pointer;
-    }
-    #homeSection {
-        .releaseSection {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: var(--secondaryColor);
-            padding: var(--paddingMedium);
-            gap: 1rem;
-            text-align: center;
-            .butRelease {
-                border: none;
-                border-radius: 0.5rem;
-                background-color: var(--quaternaryColor);
-                color: var(--fontColorSecondary);
-                padding: var(--paddingMedium) var(--paddingMedium);
-                margin-bottom: var(--marginLarge);
-            }
-            h2 {
-                margin: var(--marginSmall);
-            }
-            img {
-                border-radius: 0.5rem;
-                padding: var(--paddingMedium);
-                width: var(--imgXsmall);
-                background-color: var(--backgroundColor);
-            }
-        }
-        .descriptionText {
-            margin: var(--marginMedium);
-            p, blockquote {
-                margin-bottom: var(--marginMedium);
-            }
-        }
-        blockquote {
-            background-color: var(--tertiaryColor);
-            padding: var(--paddingMedium);
-            color: var(--fontColorSecondary);
-            border-radius: 0.5rem;
-            p:nth-of-type(1) {
-                font-style: italic;
-                text-align: center;
-            }
-            p:nth-of-type(2){
-                text-align: end;
-            }
-        }
-        aside {
-            display: none;
-        }
-    }
-    #tourSection {
-        .largeImage {
-            display: none;
-        }
-        article {
-            margin: var(--marginMedium);
-            border-bottom: 1px solid var(--secondaryColor);
-            p:nth-of-type(1) {
-                font-weight: 600;
-                color: var(--primaryColor);
-            }
-            p:nth-of-type(2) {
-                font-weight: 600;
-                color: var(--quaternaryColor);
-            }
-            .tourDate {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                img {
-                    width: 20px;
-                }
-                p {
-                    font-weight: 200;
-                }
-            }
-        }
-    }
-    #bookSection {
-        article {
-            border-bottom: 1px solid var(--secondaryColor);
-            margin: var(--marginMedium);
-            padding-bottom: var(--paddingMedium);
-            img {
-                display: grid;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-            }
-            header {
-                padding: 0rem;
-                margin: var(--marginMedium) 0rem;
-                background-color: var(--backgroundColor);
-                color: var(--fontColorPrimary);
-                h4 {
-                    font-size: var(--fontSmallHeader);
-                }
-                p {
-                    font-weight: 500;
-                }
-                span {
-                    font-weight: 400;
-                }
-            }
-        }
-    }
-    #contactSection {
-        article {
-            margin: var(--marginMedium);
-            padding-bottom: var(--paddingMedium);
-            img {
-                display: grid;
-                margin-left: auto;
-                margin-right: auto;
-                border-radius: 50%;
-                width: var(--imgXsmall);
-            }
-            header {
-                padding: 0rem;
-                color: var(--fontColorPrimary);
-                background-color: var(--backgroundColor);
-                h4 {
-                    font-size: var(--fontSmallHeader);
-                    margin-bottom: var(--marginMedium);
-                }
-            }
-            div {
-                p {
-                    margin-bottom: var(--marginSmall);
-                }
-                a {
-                    color: var(--tertiaryColor);
-                    text-decoration: none;
-                }
-            }
-        }
-        article:nth-of-type(1) {
-            border-bottom: 1px solid var(--secondaryColor);
-        }
-        form {
-            margin: var(--marginMedium);
-            fieldset {
-                border-radius: 0.5rem;
-                padding: var(--paddingMedium);
-            }
-            label {
-                display: flow;
-            }
-            input[type=text], input[type=email], textarea {
-                width: 100%;
-                margin-bottom: var(--marginMedium);
-                padding: var(--paddingSmall);
-            }
-            input[type=submit] {
-                padding: var(--paddingSmall) var(--paddingMedium);
-                background-color: var(--tertiaryColor);
-                color: var(--fontColorSecondary);
-                border: 0rem;
-                border-radius: 0.5rem;
-                cursor: pointer;
-            }
-        }
-        .conferenceImage {
-            display: none;
-        }
+        width: fit-content;
     }
     footer {
         width: 100%;
@@ -288,41 +127,6 @@ body {
                 border-bottom: none;
             }
         }
-        #homeSection {
-            .releaseSection {
-                flex-direction: row;
-                justify-content: center;
-                align-items: center; 
-                div {
-                    margin-left: auto;
-                }
-                img {
-                    margin-left: auto;
-                }
-            }
-        }
-        #bookSection {
-            article {
-                display: flex;
-                flex-direction: row;
-                gap: var(--marginLarge);
-                img {
-                    order: 2;
-                }
-            }
-        }
-        #contactSection {
-            article {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                img {
-                    margin-right: var(--marginMedium);
-                    margin-left: var(--marginSmall);
-                }
-            }
-        }
         footer {
             display: grid;
             grid-template-columns: auto 2fr auto;
@@ -341,115 +145,7 @@ body {
             }
         }
     }
-    @media (min-width:768px) {
-        #homeSection {
-            .descriptionText {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                div {
-                    flex:1;
-                }
-                aside {
-                    display: block;
-                    width: 20%;
-                    padding-left: 15px;
-                    margin-left: 15px;
-                    header {
-                        background-color: var(--backgroundColor);
-                        color: var(--fontColorPrimary);
-                        padding: 0;
-                        text-align: center;
-                        font-size: var(--fontXsmallHeader);
-                        line-height: 1rem;
-                        p {
-                            margin-bottom: 0;
-                        }
-                        
-                        p:nth-of-type(2) {
-                            font-weight: 200;
-                        }
-                    }
-                    div:nth-of-type(2) {
-                        display: none;
-                    }
-                }
-            }
-        }
-        #tourSection {
-            .smallImage {
-                display: none;
-            }
-            .largeImage {
-                display: block;
-                max-height: 450px;
-                object-fit: cover;
-            }
-        }
-        #contactSection {
-            .contactInformation {
-                display: grid;
-                grid-template-columns: 1fr auto;
-                .conferenceImage {
-                    padding: var(--paddingMedium);
-                    display: block;
-                    height: max-content;
-                }
-            }
-        }
-    }
     @media (min-width: 1024px){
-        margin: 0rem var(--marginXlarge);
-        #homeSection {
-            .descriptionText {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                aside {
-                    width: 30%;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: var(--marginMedium);
-                    div:nth-of-type(2) {
-                        display: block;
-                    }
-                }
-            }
-        }
-        #tourSection {
-            .tours {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                article {
-                    border-radius: 0.5rem;
-                    padding: var(--paddingSmall);
-                    border: 1px solid var(--secondaryColor);
-                }
-            }
-        }
-        #bookSection {
-            .books {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                article {
-                    border-radius: 0.5rem;
-                    padding: var(--paddingSmall);
-                    border: 1px solid var(--secondaryColor);
-                    img {
-                        width: var(--imgXsmall);
-                        height: min-content;
-                        align-self: center;
-                    }
-                }
-            }
-        }
-        #contactSection {
-            .contactInformation {
-                grid-template-columns: 2fr 1fr;
-                .conferenceImage {
-                    height: 100%;
-                }
-            }
-        }
+        margin: 0 var(--marginXlarge);
     }
 }
