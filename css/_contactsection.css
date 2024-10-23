@@ -76,21 +76,13 @@
     #contactSection {
         .contactInformation {
             display: grid;
-            grid-template-columns: 1fr auto;
+            /* grid-template-columns: 1fr auto; */
+            grid-template-columns: 1fr minmax(300px, 450px);
             .conferenceImage {
                 padding: var(--paddingMedium);
                 display: block;
                 height: max-content;
-            }
-        }
-    }
-}
-@media (min-width: 1024px){
-    #contactSection {
-        .contactInformation {
-            grid-template-columns: 2fr 1fr;
-            .conferenceImage {
-                height: max-content;
+                max-width: 100%;
             }
         }
     }
